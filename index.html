@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="todo">
+            <div class="todo__wrapper">
+                <div class="todo__header-container">
+                    <h1 class="todo__header">Список задач</h1>
+                    <div class="todo__info-icon">
+                        <img src="assets/icons/info.png" alt="info">
+                        <div class="todo__info-text">
+                            Это ваш список задач. Вы можете добавлять, удалять и управлять задачами здесь.
+                        </div>
+                    </div>
+                </div>
+                <div class="todo__input-group">
+                    <input class="todo__input" type="text" id="new-task" placeholder="Добавить новую задачу...">
+                    <button class="todo__btn" id="add-task-btn">
+                        <img src="assets/icons/task-add.png" alt="add" class="todo__btn-icon"> Добавить задачу
+                    </button>
+                </div>
+                <ul class="todo__list" id="task-list"></ul>
+                <button class="todo__btn todo__btn-clear" id="clear-tasks-btn">Очистить список</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="popup scale-in">
+        <div class="popup__close">&times;</div>
+        <form id="taskForm" class="popup__form">
+            <label for="taskInput">Как вы хотите изменить название?</label>
+            <input type="text" id="taskInput" name="taskInput" placeholder="Введите новое имя задачи...">
+            <div class="popup__form-btns">
+                <button class="save-btn" type="submit">Сохранить</button>
+                <button class="cancel-btn">Отменить</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
